@@ -26,56 +26,29 @@ const HomePage = () => {
                         <a href="https://www.facebook.com/mark123jesper" target="_blank" rel="noreferrer"><i className="fab fa-facebook-square"></i></a>
                         <a href="https://twitter.com/shironekomaru69" target="_blank" rel="noreferrer"><i className="fab fa-twitter-square"></i></a>
                     </div>
-                    <Button component={Link} to="/contact" className="button" variant="outlined">Contact Me</Button>
                 </div>
+                <Button component={Link} to="/contact" className="button" variant="outlined">Contact Me</Button>
             </HomePageStyles>
         </>
     )
 }
 
 const HomePageStyles = styled.header`
-    width: 100%;
-    height: 100%;
     position: relative;
 
     .p-particles-js {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
+        z-index: -1
     }
-
-    .typography {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 60%;
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-
-            span {
-                font-size: 4rem;
-                color: var(--secondary-color)
-            }
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
         
-        .button {
-            color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            animation: shake 1s cubic-bezier(.36, .07, .19, .97) both infinite;
-            transform: translate3d(0, 0, 0);
-            backface-visibility: hidden;
-            perspective: 1000px;
+    .button {
+        animation: shake 1s cubic-bezier(.36, .07, .19, .97) both infinite;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
 
-            @keyframes shake {
+        @keyframes shake {
             10%,
             90% {
                 transform: translate3d(-1px, 0, 0);
@@ -93,39 +66,9 @@ const HomePageStyles = styled.header`
             60% {
                 transform: translate3d(4px, 0, 0);
             }
-            }
-
-            &:hover {
-                color: var(--font-color-light);
-                background-color: var(--secondary-color);
-                border-color: var(--secondary-color);
-            }
-        }
-
-        .icon {
-            margin-bottom: 1.5rem;
-
-            a {
-                margin: 1rem;
-                
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                i {
-                    font-size: 1.5rem;
-
-                    &:hover {
-                        color: var(--secondary-color);
-                    }
-                }
-            }
         }
     }
+
 `;
 
 export default HomePage

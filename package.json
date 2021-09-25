@@ -7,18 +7,20 @@
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.1",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-intersection-observer": "^8.32.1",
     "react-particles-js": "^3.5.3",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.1",
     "tsparticles": "^1.35.1",
-    "typewriter-effect": "^2.18.2",
-    "web-vitals": "^1.1.2"
+    "typewriter-effect": "^2.18.2"
+  },
+  "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
   },
   "scripts": {
     "start": "react-scripts start",

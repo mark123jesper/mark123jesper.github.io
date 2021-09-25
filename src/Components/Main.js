@@ -1,53 +1,128 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import styled from 'styled-components'
-import AboutPage from '../Pages/AboutPage'
-import HomePage from '../Pages/HomePage'
-import SkillPage from '../Pages/SkillPage'
-import ProjectPage from '../Pages/ProjectPage'
-import ContactPage from '../Pages/ContactPage'
+import React from 'react';
+import {
+  Avatar,
+  Box,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ToggleButton,
+  ToggleButtonGroup,
+  Toolbar,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+import { Switch as Switcher, Route } from 'react-router-dom';
+import { CenterLayout } from '../Styles/Layouts'
+import HomePage from '../Pages/HomePage';
+import AboutPage from '../Pages/AboutPage';
+import ContactPage from '../Pages/ContactPage';
+import SkillPage from '../Pages/SkillPage';
+import ProjectPage from '../Pages/ProjectPage';
+import avatar from '../Assets/M.png'
 
-const Main = () => {
-    return (
-        <MainStyles>
-            {/* <div className="lines">
-                <div className="line-1"></div>
-                <div className="line-2"></div>
-                <div className="line-3"></div>
-                <div className="line-4"></div>
-            </div> */}
-            <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route path="/about" component={AboutPage} />
-                <Route path="/skill" component={SkillPage} />
-                <Route path="/project" component={ProjectPage}/>
-                <Route path="/contact" component={ContactPage} />
-            </Switch>
-        </MainStyles>
-    )
+const drawerWidth = 200;
+
+function Main(props) {
+  const [darkmode, setDarkmode] = props.functions;
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const drawer = (
+    <>
+      <CenterLayout>
+        <Toolbar>
+          <Avatar
+            alt="White Car Dev"
+            src={avatar}
+            sx={{ width: 130, height: 130, marginTop: 3 }}
+          />
+        </Toolbar>
+      </CenterLayout>
+      <List>
+        <ListItem button component={Link} to="/">Home</ListItem>
+        <ListItem button component={Link} to="/about">About</ListItem>
+        <ListItem button component={Link} to="/skill">Skill</ListItem>
+        <ListItem button component={Link} to="/project">Project</ListItem>
+      </List>
+
+      <CenterLayout>
+        <Toolbar sx={{ marginBottom: 3 }}>
+          <ToggleButtonGroup
+            color="primary"
+            onChange={() => setDarkmode(!darkmode)}
+          >
+            <ToggleButton>{darkmode ? 'Light Mode' : 'Dark Mode'}</ToggleButton>
+          </ToggleButtonGroup>
+        </Toolbar>
+      </CenterLayout>
+    </>
+  );
+
+  const container = window !== undefined ? () => window().document.body : undefined;
+
+  return (
+    <Box sx={{ display: 'flex' }} >
+      <IconButton
+        aria-label="open drawer"
+        edge="start"
+        onClick={handleDrawerToggle}
+        sx={{ mr: 2, display: { sm: 'none' }, position: 'fixed', top: 15, left: 25, zIndex: 15 }}
+      >
+        <MenuIcon />
+      </IconButton>
+
+      <Box
+        component="nav"
+        sx={{
+          width: { sm: drawerWidth }, flexShrink: { sm: 0 }
+        }}
+        aria-label="mailbox folders"
+      >
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '.MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, display: "flex", flexDirection: "column", justifyContent: "space-between", textAlign: "center", opacity: "90%", },
+          }}
+        >
+          {drawer}
+        </Drawer>
+        <Drawer
+          variant="permanent"
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, display: "flex", flexDirection: "column", justifyContent: "space-between", zIndex: "5", background: "transparent" },
+          }}
+          open
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+
+
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <Toolbar />
+        <Switcher>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/skill" component={SkillPage} />
+          <Route path="/project" component={ProjectPage} />
+          <Route path="/contact" component={ContactPage} />
+        </Switcher>
+      </Box>
+    </Box>
+  );
 }
 
-const MainStyles = styled.main`
-    position: relative;
-    margin-left: 12rem;
-    height: 100vh;
-
-    /* .lines {
-        position: absolute;
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-
-        .line-1,
-        .line-2,
-        .line-3,
-        .line-4 {
-            width: 1px;
-            min-height: 100vh;
-            background-color: blue;
-        }
-    } */
-`;
-
-export default Main
+export default Main;

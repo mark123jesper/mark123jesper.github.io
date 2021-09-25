@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
-export const MainLayout = styled.div`
-    padding: 3rem;
+export const TextCenter = styled.section`
+    text-align: center;
 `;
 
-export const InnerLayout = styled.div`
-    padding: 2rem 0;
+export const CenterLayout = styled.section`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
 `;

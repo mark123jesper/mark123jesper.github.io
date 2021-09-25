@@ -1,17 +1,33 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
+import Particle from '../Components/Particle';
 
 const ProjectPage = () => {
     return (
         <>
             <Helmet>
-                <title>Project | White Cat Developer</title>
+                <title>About | White Cat Developer</title>
             </Helmet>
-            <div>
+            <AboutPageStyles>
+                <div className="p-particles-js">
+                    <Particle />
+                </div>
                 Project
-            </div>
+            </AboutPageStyles>
         </>
     )
 }
 
-export default ProjectPage;
+const AboutPageStyles = styled.section`
+    position: relative;
+    
+    .p-particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+`;
+
+export default ProjectPage
