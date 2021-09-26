@@ -1,13 +1,22 @@
+import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
 import Title from '../Components/Title';
+import Skills from '../Components/Skill/Skills';
+import { SkillList } from '../Components/Skill/SkillList'
 
 const SkillPage = () => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [])
+
     return (
         <>
+            {/* #636e72 */}
             <Helmet>
                 <title>About | White Cat Developer</title>
             </Helmet>
@@ -16,7 +25,16 @@ const SkillPage = () => {
                     <Particle />
                 </div>
                 <Box minHeight="88vh">
-                    <Title title={"Skills"}/>
+                    <Title title={"Technology Stacks"} />
+                    <Grid container spacing={2} alignItems="center" justify="center">
+                        {SkillList.map((skill, index) => (
+                            <Skills
+                                key={index}
+                                title={skill.title}
+                                desc={skill.desc}
+                            />
+                        ))}
+                    </Grid>
                 </Box>
             </AboutPageStyles>
         </>

@@ -21,7 +21,7 @@ import SkillPage from '../Pages/SkillPage';
 import ProjectPage from '../Pages/ProjectPage';
 import avatar from '../Assets/M.png';
 
-const drawerWidth = 200;
+const drawerWidth = 260;
 
 function Main(props) {
   const [darkmode, setDarkmode] = props.functions;
