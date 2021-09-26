@@ -4,15 +4,7 @@ import styled from 'styled-components';
 import Particle from '../Components/Particle';
 import { Link as RouteLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import {
-    createTheme,
-    responsiveFontSizes,
-    ThemeProvider,
-} from '@mui/material/styles';
 import { Box } from '@mui/system';
-
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
 
 const HomePage = () => {
     return (
@@ -20,7 +12,6 @@ const HomePage = () => {
             <Helmet>
                 <title>Home | White Cat Developer</title>
             </Helmet>
-            <ThemeProvider theme={theme}>
                 <HomePageStyles>
                     <Box
                         display="flex"
@@ -58,7 +49,6 @@ const HomePage = () => {
                         </Grid>
                     </Box>
                 </HomePageStyles>
-            </ThemeProvider>
         </>
     )
 }

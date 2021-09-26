@@ -61,7 +61,7 @@ function Particle() {
                       speed: 1,
                       opacity_min: 0.1
                     }
-                  }
+                  },
                 }
               }}
       />

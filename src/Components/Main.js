@@ -19,7 +19,7 @@ import AboutPage from '../Pages/AboutPage';
 import ContactPage from '../Pages/ContactPage';
 import SkillPage from '../Pages/SkillPage';
 import ProjectPage from '../Pages/ProjectPage';
-import avatar from '../Assets/M.png'
+import avatar from '../Assets/M.png';
 
 const drawerWidth = 200;
 
@@ -113,7 +113,6 @@ function Main(props) {
 
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <Toolbar />
         <Switcher>
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
@@ -122,7 +121,7 @@ function Main(props) {
           <Route path="/contact" component={ContactPage} />
         </Switcher>
       </Box>
-    </Box>
+    </Box >
   );
 }
 

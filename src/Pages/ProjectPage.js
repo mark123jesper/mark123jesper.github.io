@@ -16,7 +16,7 @@ const ProjectPage = () => {
                     <Particle />
                 </div>
                 <Box minHeight="88vh">
-                    <Title title={"About Me"}/>
+                    <Title title={"Projects"}/>
                 </Box>
             </AboutPageStyles>
         </>
