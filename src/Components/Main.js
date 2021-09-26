@@ -34,29 +34,30 @@ function Main(props) {
 
   const drawer = (
     <>
-      <CenterLayout>
-        <Toolbar>
-          <Avatar
-            alt="White Car Dev"
-            src={avatar}
-            sx={{ width: 130, height: 130, marginTop: 3 }}
-          />
-        </Toolbar>
-      </CenterLayout>
-      <List>
-        <ListItem button component={Link} to="/">Home</ListItem>
-        <ListItem button component={Link} to="/about">About</ListItem>
-        <ListItem button component={Link} to="/skill">Skill</ListItem>
-        <ListItem button component={Link} to="/project">Project</ListItem>
-      </List>
-
+      <div>
+        <CenterLayout>
+          <Toolbar>
+            <Avatar
+              alt="White Car Dev"
+              src={avatar}
+              sx={{ width: 130, height: 130, margin: '30px 0' }}
+            />
+          </Toolbar>
+        </CenterLayout>
+        <List>
+          <ListItem button component={Link} to="/">Home</ListItem>
+          <ListItem button component={Link} to="/about">About</ListItem>
+          <ListItem button component={Link} to="/skill">Skill</ListItem>
+          <ListItem button component={Link} to="/project">Project</ListItem>
+        </List>
+      </div>
       <CenterLayout>
         <Toolbar sx={{ marginBottom: 3 }}>
           <ToggleButtonGroup
             color="primary"
             onChange={() => setDarkmode(!darkmode)}
           >
-            <ToggleButton>{darkmode ? 'Light Mode' : 'Dark Mode'}</ToggleButton>
+            <ToggleButton value="toggleButton">{darkmode ? 'Light Mode' : 'Dark Mode'}</ToggleButton>
           </ToggleButtonGroup>
         </Toolbar>
       </CenterLayout>
@@ -93,7 +94,7 @@ function Main(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '.MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, display: "flex", flexDirection: "column", justifyContent: "space-between", textAlign: "center", opacity: "90%", },
+            '.MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, display: "flex", flexDirection: "column", justifyContent: "space-between", textAlign: "center", },
           }}
         >
           {drawer}

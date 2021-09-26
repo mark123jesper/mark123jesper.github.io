@@ -1,7 +1,9 @@
+import { Box } from '@mui/system';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
+import Title from '../Components/Title';
 
 const AboutPage = () => {
     return (
@@ -13,7 +15,9 @@ const AboutPage = () => {
                 <div className="p-particles-js">
                     <Particle />
                 </div>
-                About
+                <Box minHeight="88vh">
+                    <Title title={"About Me"}/>
+                </Box>
             </AboutPageStyles>
         </>
     )

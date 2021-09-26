@@ -1,9 +1,18 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button, Grid, Typography, Link, Stack } from '@mui/material';
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
-import { Link } from 'react-router-dom';
+import { Link as RouteLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import {
+    createTheme,
+    responsiveFontSizes,
+    ThemeProvider,
+} from '@mui/material/styles';
+import { Box } from '@mui/system';
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 const HomePage = () => {
     return (
@@ -11,24 +20,45 @@ const HomePage = () => {
             <Helmet>
                 <title>Home | White Cat Developer</title>
             </Helmet>
-            <HomePageStyles>
-                <div className="p-particles-js">
-                    <Particle />
-                </div>
-                <div className="typography">
-                    <h1>Welcome to <span>White Cat Developer</span>'s Den</h1>
-                    <p>
-                        Home of aspiration and inspiration.
-                    </p>
-                    <div className="icon">
-                        <a href="https://www.linkedin.com/in/mark123jesper/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/mark123jesper" target="_blank" rel="noreferrer"><i className="fab fa-github-square"></i></a>
-                        <a href="https://www.facebook.com/mark123jesper" target="_blank" rel="noreferrer"><i className="fab fa-facebook-square"></i></a>
-                        <a href="https://twitter.com/shironekomaru69" target="_blank" rel="noreferrer"><i className="fab fa-twitter-square"></i></a>
-                    </div>
-                </div>
-                <Button component={Link} to="/contact" className="button" variant="outlined">Contact Me</Button>
-            </HomePageStyles>
+            <ThemeProvider theme={theme}>
+                <HomePageStyles>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        minHeight="88vh"
+                    >
+                        <div className="p-particles-js">
+                            <Particle />
+                        </div>
+                        <Grid container spacing={2} align="center" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                            <Grid item xs={12}>
+                                <Typography variant="h1">
+                                    Welcome to <Typography component="span" variant="h1" color="primary">White Cat Developer</Typography>'s Den
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography variant="h6">
+                                    Home of aspiration and inspiration.
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Stack direction="row" spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Link href="https://www.linkedin.com/in/mark123jesper/" target="_blank" variant="h5"><i className="fab fa-linkedin"></i></Link>
+                                    <Link href="https://github.com/mark123jesper" target="_blank" variant="h5"><i className="fab fa-github-square"></i></Link>
+                                    <Link href="https://www.facebook.com/mark123jesper" target="_blank" variant="h5"><i className="fab fa-facebook-square"></i></Link>
+                                    <Link href="https://twitter.com/shironekomaru69" target="_blank" variant="h5"><i className="fab fa-twitter-square"></i></Link>
+                                </Stack>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button component={RouteLink} to="/contact" className="button" variant="outlined">
+                                    Contact Me
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Box>
+                </HomePageStyles>
+            </ThemeProvider>
         </>
     )
 }

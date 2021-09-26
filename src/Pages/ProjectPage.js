@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Box } from '@mui/system';
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
+import Title from '../Components/Title';
 
 const ProjectPage = () => {
     return (
@@ -13,7 +15,9 @@ const ProjectPage = () => {
                 <div className="p-particles-js">
                     <Particle />
                 </div>
-                Project
+                <Box minHeight="88vh">
+                    <Title title={"About Me"}/>
+                </Box>
             </AboutPageStyles>
         </>
     )
