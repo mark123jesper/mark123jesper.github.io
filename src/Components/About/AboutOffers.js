@@ -5,7 +5,7 @@ import Title from '../Title';
 const AboutOffers = () => {
     return (
         <>
-            <Title title={"Mark\'s Offers"} />
+            <Title title={"Mark's Offers"} />
             <Grid container spacing={3} alignItems="center" justify="center">
                 <Grid item xs={12} lg={4} align="center">
                     <Card
