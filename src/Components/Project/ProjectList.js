@@ -1,4 +1,3 @@
-import one from '../../Assets/Projects/1.jpg';
 import two from '../../Assets/Projects/2-1.jpg';
 import three from '../../Assets/Projects/3-1.jpg';
 import four from '../../Assets/Projects/4-1.jpg';

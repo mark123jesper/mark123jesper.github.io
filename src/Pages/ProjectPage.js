@@ -6,7 +6,7 @@ import Particle from '../Components/Particle';
 import Title from '../Components/Title';
 import { Grid } from '@mui/material';
 import Projects from '../Components/Project/Projects';
-import { ExerciseList, ProjectList } from '../Components/Project/ProjectList';
+import { ProjectList } from '../Components/Project/ProjectList';
 
 const ProjectPage = () => {
 
