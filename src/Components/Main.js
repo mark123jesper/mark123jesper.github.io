@@ -75,7 +75,7 @@ function Main(props) {
         aria-label="open drawer"
         edge="start"
         onClick={handleDrawerToggle}
-        sx={{ mr: 2, display: { sm: 'none' }, position: 'fixed', top: 15, left: 25, zIndex: 15 }}
+        sx={{ mr: 2, display: { sm: 'none' }, position: 'fixed', top: 15, right: 0, zIndex: 15 }}
       >
         <MenuIcon />
       </IconButton>
@@ -90,6 +90,7 @@ function Main(props) {
         <Drawer
           container={container}
           variant="temporary"
+          anchor="right"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
@@ -119,7 +120,7 @@ function Main(props) {
         <TransitionStyle>
           <TransitionGroup>
             <CSSTransition
-              timeout={1200}
+              timeout={230}
               classNames='fade'
               key={location.key}
             >

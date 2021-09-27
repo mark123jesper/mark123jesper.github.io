@@ -6,6 +6,7 @@ import Particle from '../Components/Particle';
 import AboutCompany from '../Components/About/AboutCompany';
 import AboutMark from '../Components/About/AboutMark';
 import AboutOffers from '../Components/About/AboutOffers';
+import AboutExperience from '../Components/About/AboutExperience';
 
 const AboutPage = () => {
 
@@ -27,6 +28,7 @@ const AboutPage = () => {
                         <AboutCompany />
                         <AboutMark />
                         <AboutOffers />
+                        <AboutExperience />
                     </Container>
                 </Box>
             </AboutPageStyles>

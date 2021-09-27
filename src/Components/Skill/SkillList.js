@@ -1,6 +1,6 @@
 import { Adobeillustrator, Adobephotoshop, Bootstrap, Canva, CssThree, Express, Figma, Git, Github, Gitlab, Heroku, Html5, Javascript, Jquery, Laravel, Mongodb, Mysql, Netlify, Nodedotjs, Php, Postman, Python, ReactJs, Sass, Vercel, Visualstudiocode, Vuedotjs } from "@icons-pack/react-simple-icons";
 
-const color = "grey";
+const color = "#ab7a36";
 const size = "100";
 
 export const SkillList = [

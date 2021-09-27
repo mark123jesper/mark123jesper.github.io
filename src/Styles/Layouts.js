@@ -19,6 +19,6 @@ export const TransitionStyle = styled.div`
 
     .fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 250ms ease-in;
+    transition: opacity 450ms ease-in-out;
     }
 `;
