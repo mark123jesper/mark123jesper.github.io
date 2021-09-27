@@ -11,15 +11,16 @@ import {
   Toolbar,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Switch as Switcher, Route } from 'react-router-dom';
-import { CenterLayout } from '../Styles/Layouts'
+import { CenterLayout, TransitionStyle } from '../Styles/Layouts'
 import HomePage from '../Pages/HomePage';
 import AboutPage from '../Pages/AboutPage';
 import ContactPage from '../Pages/ContactPage';
 import SkillPage from '../Pages/SkillPage';
 import ProjectPage from '../Pages/ProjectPage';
 import avatar from '../Assets/M.png';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const drawerWidth = 260;
 
@@ -45,10 +46,10 @@ function Main(props) {
           </Toolbar>
         </CenterLayout>
         <List>
-          <ListItem button component={Link} sx={{fontSize: 25}} to="/">Home</ListItem>
-          <ListItem button component={Link} sx={{fontSize: 25}} to="/about">About</ListItem>
-          <ListItem button component={Link} sx={{fontSize: 25}} to="/skill">Skill</ListItem>
-          <ListItem button component={Link} sx={{fontSize: 25}} to="/project">Project</ListItem>
+          <ListItem button component={Link} sx={{ fontSize: 25 }} to="/">Home</ListItem>
+          <ListItem button component={Link} sx={{ fontSize: 25 }} to="/about">About</ListItem>
+          <ListItem button component={Link} sx={{ fontSize: 25 }} to="/skill">Skill</ListItem>
+          <ListItem button component={Link} sx={{ fontSize: 25 }} to="/project">Project</ListItem>
         </List>
       </div>
       <CenterLayout>
@@ -65,6 +66,8 @@ function Main(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+
+  const location = useLocation()
 
   return (
     <Box sx={{ display: 'flex' }} >
@@ -113,13 +116,23 @@ function Main(props) {
 
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <Switcher>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/skill" component={SkillPage} />
-          <Route path="/project" component={ProjectPage} />
-          <Route path="/contact" component={ContactPage} />
-        </Switcher>
+        <TransitionStyle>
+          <TransitionGroup>
+            <CSSTransition
+              timeout={1200}
+              classNames='fade'
+              key={location.key}
+            >
+              <Switcher location={location}>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/skill" component={SkillPage} />
+                <Route path="/project" component={ProjectPage} />
+                <Route path="/contact" component={ContactPage} />
+              </Switcher>
+            </CSSTransition>
+          </TransitionGroup>
+        </TransitionStyle>
       </Box>
     </Box >
   );
