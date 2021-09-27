@@ -1,12 +1,13 @@
 import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
 import Title from '../Components/Title';
 import Skills from '../Components/Skill/Skills';
-import { SkillList } from '../Components/Skill/SkillList'
+import Tools from '../Components/Skill/Tools';
+import { SkillList, ToolsList } from '../Components/Skill/SkillList'
 
 const SkillPage = () => {
 
@@ -33,6 +34,17 @@ const SkillPage = () => {
                                 title={skill.title}
                                 desc={skill.desc}
                                 imgSrc={skill.imgSrc}
+                            />
+                        ))}
+                    </Grid>
+                    <Title title={"Tools and Platforms"} />
+                    <Grid container spacing={2} alignItems="center" justify="center">
+                        {ToolsList.map((tool, index) => (
+                            <Tools
+                                key={index}
+                                title={tool.title}
+                                desc={tool.desc}
+                                imgSrc={tool.imgSrc}
                             />
                         ))}
                     </Grid>

@@ -1,10 +1,10 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
 import React from 'react'
 
-const Skills = ({ title, imgSrc, desc }) => {
+const Tools = ({ title, imgSrc }) => {
     return (
         <>
-            <Grid item xs={12} md={6} lg={4} align="center">
+            <Grid item xs={6} md={4} lg={3} align="center" justify="center">
                 <Card
                     variant="outlined"
                     sx={{
@@ -15,11 +15,8 @@ const Skills = ({ title, imgSrc, desc }) => {
                         <CardMedia>
                             {imgSrc}
                         </CardMedia>
-                        <Typography variant="h4" color="text.secondary" gutterBottom>
+                        <Typography variant="h5" color="text.secondary">
                             {title}
-                        </Typography>
-                        <Typography sx={{ mt: 1.5 }} variant="body2">
-                            {desc}
                         </Typography>
                     </CardContent>
                 </Card>
@@ -28,4 +25,4 @@ const Skills = ({ title, imgSrc, desc }) => {
     )
 }
 
-export default Skills
+export default Tools
