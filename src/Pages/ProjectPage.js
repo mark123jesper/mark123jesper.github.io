@@ -17,7 +17,7 @@ const ProjectPage = () => {
     return (
         <>
             <Helmet>
-                <title>About | White Cat Developer</title>
+                <title>Project | White Cat Developer</title>
             </Helmet>
             <AboutPageStyles>
                 <div className="p-particles-js">

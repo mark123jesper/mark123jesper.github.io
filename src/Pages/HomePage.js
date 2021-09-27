@@ -35,14 +35,14 @@ const HomePage = () => {
                             </Grid>
                             <Grid item xs={12}>
                                 <Stack direction="row" spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Link href="https://www.linkedin.com/in/mark123jesper/" target="_blank" variant="h5"><i className="fab fa-linkedin"></i></Link>
-                                    <Link href="https://github.com/mark123jesper" target="_blank" variant="h5"><i className="fab fa-github-square"></i></Link>
-                                    <Link href="https://www.facebook.com/mark123jesper" target="_blank" variant="h5"><i className="fab fa-facebook-square"></i></Link>
-                                    <Link href="https://twitter.com/shironekomaru69" target="_blank" variant="h5"><i className="fab fa-twitter-square"></i></Link>
+                                    <Link href="https://www.linkedin.com/in/mark123jesper/" target="_blank" variant="h4"><i className="fab fa-linkedin"></i></Link>
+                                    <Link href="https://github.com/mark123jesper" target="_blank" variant="h4"><i className="fab fa-github-square"></i></Link>
+                                    <Link href="https://www.facebook.com/mark123jesper" target="_blank" variant="h4"><i className="fab fa-facebook-square"></i></Link>
+                                    <Link href="https://twitter.com/shironekomaru69" target="_blank" variant="h4"><i className="fab fa-twitter-square"></i></Link>
                                 </Stack>
                             </Grid>
                             <Grid item xs={12}>
-                                <Button component={RouteLink} to="/contact" className="button" variant="outlined">
+                                <Button component={RouteLink} to="/contact" className="button" size="large" variant="outlined">
                                     Contact Me
                                 </Button>
                             </Grid>

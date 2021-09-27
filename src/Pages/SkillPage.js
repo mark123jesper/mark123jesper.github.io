@@ -18,7 +18,7 @@ const SkillPage = () => {
         <>
             {/* #636e72 */}
             <Helmet>
-                <title>About | White Cat Developer</title>
+                <title>Skill | White Cat Developer</title>
             </Helmet>
             <AboutPageStyles>
                 <div className="p-particles-js">
@@ -32,6 +32,7 @@ const SkillPage = () => {
                                 key={index}
                                 title={skill.title}
                                 desc={skill.desc}
+                                imgSrc={skill.imgSrc}
                             />
                         ))}
                     </Grid>

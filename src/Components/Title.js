@@ -22,7 +22,7 @@ const TitleStyled = styled.div`
             font-size: 2.8rem;
         }
         @media screen and (max-width: 370px){
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         &::before{
             content: "";
@@ -56,7 +56,7 @@ const TitleStyled = styled.div`
             font-size: 2.8rem;
             }
             @media screen and (max-width: 370px){
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
     }

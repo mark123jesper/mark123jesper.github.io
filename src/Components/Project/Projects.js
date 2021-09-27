@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Grid, Link, Typography } from '@mui/material'
+import { Button, Card, CardContent, CardMedia, Container, Grid, Link, Typography } from '@mui/material'
 import React from 'react';
 
 const Projects = ({ title, imgSrc, desc, liveLink, sourceCode, tags }) => {
@@ -12,15 +12,21 @@ const Projects = ({ title, imgSrc, desc, liveLink, sourceCode, tags }) => {
                     sx={{
                         background: "transparent", transition: "0.25s"
                     }}>
-                    <img src={imgSrc} alt={title} width="100%" />
+                    <CardMedia
+                        component={"img"}
+                        src={imgSrc}
+                        alt={title}
+                        width="100%"
+                        sx={{ "&:hover": { transform: "scale(1.1)", transition: "0.5s" }, transition: "0.5s" }}
+                    />
                     <CardContent>
-                        <Typography sx={{ mt: 1.5, minHeight: "50px"}} variant="h5" color="primary" gutterBottom>
+                        <Typography sx={{ mt: 1.5, minHeight: "50px" }} variant="h5" color="primary" gutterBottom>
                             {title}
                         </Typography>
-                        <Typography sx={{ mt: 1.5, minHeight: "150px"}} variant="body1">
+                        <Typography sx={{ mt: 1.5,  minHeight: "200px" }} variant="body1">
                             {desc}
                         </Typography>
-                        <Typography sx={{ mt: 1.5 }} variant="subtitle2" color="secondary" >
+                        <Typography sx={{ mt: 1.5, minHeight: "50px" }} variant="subtitle2" color="secondary" >
                             {tags}
                         </Typography>
                     </CardContent>

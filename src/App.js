@@ -10,10 +10,10 @@ let lightTheme = createTheme({
             fontFamily: `"Ubuntu", "Helvetica", "Arial", sans-serif`,
         },
         primary: {
-            main: '#278ea5',
+            main: '#182F4E',
         },
         secondary: {
-            main: '#10c4c0',
+            main: '#278ea5',
         },
         background: {
             default: '#98DED9',

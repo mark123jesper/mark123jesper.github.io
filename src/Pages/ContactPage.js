@@ -9,7 +9,7 @@ const ContactPage = () => {
     return (
         <>
             <Helmet>
-                <title>About | White Cat Developer</title>
+                <title>Contact | White Cat Developer</title>
             </Helmet>
             <AboutPageStyles>
                 <div className="p-particles-js">

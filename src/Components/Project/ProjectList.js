@@ -8,6 +8,7 @@ import eight from '../../Assets/Projects/8-1.jpg';
 import nine from '../../Assets/Projects/9-1.jpg';
 import ten from '../../Assets/Projects/10-1.jpg';
 import eleven from '../../Assets/Projects/11-1.jpg';
+import twelve from '../../Assets/Projects/12-1.jpg';
 
 export const ProjectList = [
     {
@@ -28,7 +29,7 @@ export const ProjectList = [
     },
     {
         title: "Mark.bit",
-        desc: "The first Personal Portfolio I made for my projects and skills showcase.",
+        desc: "The first Personal Portfolio I made for my projects and skills showcase. Using a bit of Bootstrap for Scrollspy, and pure CSS, JavaScript and jQuery for everything else.",
         imgSrc: three,
         tags: ["#HTML ", "#CSS ", "#Bootstrap ", "#JavaScript "],
         liveLink: "https://mark123jesper-beta.vercel.app/",
@@ -88,6 +89,14 @@ export const ProjectList = [
         tags: ["#HTML ", "#CSS ", "#JavaScript ", "#Vue JS ", "#Material-UI ", "#MySQL ", "#Laravel ", "#PHP"],
         imgSrc: eleven,
         liveLink: null,
-        sourceCode: null,
+        sourceCode: "https://github.com/mark123jesper/laravel-blog",
+    },
+    {
+        title: "White Cat Developer",
+        desc: "Latest Portfolio Website using React and Material UI with the intention of Company Association",
+        tags: ["#HTML ", "#CSS ", "#JavaScript ", "#React JS ", "#Material-UI "],
+        imgSrc: twelve,
+        liveLink: "https://whitecatdev.vercel.app/",
+        sourceCode: "https://github.com/mark123jesper/mark123jesper.github.io",
     },
 ];
