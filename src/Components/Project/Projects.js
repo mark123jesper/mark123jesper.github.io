@@ -10,17 +10,17 @@ const Projects = ({ title, imgSrc, desc, liveLink, sourceCode, tags }) => {
                 <Card
                     variant="outlined"
                     sx={{
-                        background: "transparent", minHeight: "180px", transition: "0.25s"
+                        background: "transparent", transition: "0.25s"
                     }}>
                     <img src={imgSrc} alt={title} width="100%" />
                     <CardContent>
-                        <Typography variant="h5" color="text.secondary" gutterBottom>
+                        <Typography sx={{ mt: 1.5, minHeight: "50px"}} variant="h5" color="primary" gutterBottom>
                             {title}
                         </Typography>
-                        <Typography sx={{ mt: 1.5 }} variant="body1">
+                        <Typography sx={{ mt: 1.5, minHeight: "150px"}} variant="body1">
                             {desc}
                         </Typography>
-                        <Typography sx={{ mt: 1.5 }} variant="subtitle2">
+                        <Typography sx={{ mt: 1.5 }} variant="subtitle2" color="secondary" >
                             {tags}
                         </Typography>
                     </CardContent>
