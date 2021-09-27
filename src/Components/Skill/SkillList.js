@@ -1,4 +1,4 @@
-import { Adobeillustrator, Adobephotoshop, Bootstrap, Canva, CssThree, Express, Figma, Git, Github, Gitlab, Heroku, Html5, Javascript, Jquery, Laravel, Mongodb, Mysql, Netlify, Nodedotjs, Php, Postman, ReactJs, Sass, Vercel, Visualstudiocode, Vuedotjs } from "@icons-pack/react-simple-icons";
+import { Adobeillustrator, Adobephotoshop, Bootstrap, Canva, CssThree, Express, Figma, Git, Github, Gitlab, Heroku, Html5, Javascript, Jquery, Laravel, Mongodb, Mysql, Netlify, Nodedotjs, Php, Postman, Python, ReactJs, Sass, Vercel, Visualstudiocode, Vuedotjs } from "@icons-pack/react-simple-icons";
 
 const color = "grey";
 const size = "100";
@@ -73,6 +73,11 @@ export const SkillList = [
         title: "MongoDB",
         desc: "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.",
         imgSrc: <Mongodb color={color} size={size}/>
+    },
+    {
+        title: "Python",
+        desc: "A general-purpose programming language that can be used for many things like web development, AI, machine learning, operating systems, mobile application development, and video games.",
+        imgSrc: <Python color={color} size={size}/>
     },
 ];
 

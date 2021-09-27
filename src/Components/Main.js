@@ -45,10 +45,10 @@ function Main(props) {
           </Toolbar>
         </CenterLayout>
         <List>
-          <ListItem button component={Link} to="/">Home</ListItem>
-          <ListItem button component={Link} to="/about">About</ListItem>
-          <ListItem button component={Link} to="/skill">Skill</ListItem>
-          <ListItem button component={Link} to="/project">Project</ListItem>
+          <ListItem button component={Link} sx={{fontSize: 25}} to="/">Home</ListItem>
+          <ListItem button component={Link} sx={{fontSize: 25}} to="/about">About</ListItem>
+          <ListItem button component={Link} sx={{fontSize: 25}} to="/skill">Skill</ListItem>
+          <ListItem button component={Link} sx={{fontSize: 25}} to="/project">Project</ListItem>
         </List>
       </div>
       <CenterLayout>

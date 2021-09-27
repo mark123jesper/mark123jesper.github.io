@@ -15,7 +15,7 @@ const Tools = ({ title, imgSrc }) => {
                         <CardMedia>
                             {imgSrc}
                         </CardMedia>
-                        <Typography variant="h5" color="text.secondary">
+                        <Typography variant="h5" color="primary">
                             {title}
                         </Typography>
                     </CardContent>

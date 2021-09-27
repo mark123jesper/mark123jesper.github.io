@@ -15,10 +15,10 @@ const Skills = ({ title, imgSrc, desc }) => {
                         <CardMedia>
                             {imgSrc}
                         </CardMedia>
-                        <Typography variant="h4" color="text.secondary" gutterBottom>
+                        <Typography variant="h5" color="primary" gutterBottom>
                             {title}
                         </Typography>
-                        <Typography sx={{ mt: 1.5 }} variant="body2">
+                        <Typography sx={{ mt: 1.5 }} variant="body1">
                             {desc}
                         </Typography>
                     </CardContent>

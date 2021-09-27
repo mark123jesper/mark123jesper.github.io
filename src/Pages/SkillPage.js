@@ -17,7 +17,6 @@ const SkillPage = () => {
 
     return (
         <>
-            {/* #636e72 */}
             <Helmet>
                 <title>Skill | White Cat Developer</title>
             </Helmet>
