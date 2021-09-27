@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Box } from '@mui/system';
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
 import Title from '../Components/Title';
+import { Grid } from '@mui/material';
+import Projects from '../Components/Project/Projects';
+import { ProjectList } from '../Components/Project/ProjectList';
 
 const ProjectPage = () => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [])
+
     return (
         <>
             <Helmet>
@@ -16,7 +24,20 @@ const ProjectPage = () => {
                     <Particle />
                 </div>
                 <Box minHeight="88vh">
-                    <Title title={"Projects"}/>
+                    <Title title={"Projects"} />
+                    <Grid container spacing={2} alignItems="center" justify="center">
+                        {ProjectList.map((skill, index) => (
+                            <Projects
+                                key={index}
+                                index={index}
+                                imgSrc={skill.imgSrc}
+                                liveLink={skill.liveLink}
+                                sourceCode={skill.sourceCode}
+                                title={skill.title}
+                                desc={skill.desc}
+                            />
+                        ))}
+                    </Grid>
                 </Box>
             </AboutPageStyles>
         </>
