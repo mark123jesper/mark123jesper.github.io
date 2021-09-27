@@ -1,7 +1,7 @@
 import { Button, Card, CardContent, Grid, Link, Typography } from '@mui/material'
 import React from 'react';
 
-const Projects = ({ title, imgSrc, desc, liveLink, sourceCode }) => {
+const Projects = ({ title, imgSrc, desc, liveLink, sourceCode, tags }) => {
 
 
     return (
@@ -17,8 +17,11 @@ const Projects = ({ title, imgSrc, desc, liveLink, sourceCode }) => {
                         <Typography variant="h5" color="text.secondary" gutterBottom>
                             {title}
                         </Typography>
-                        <Typography sx={{ mt: 1.5 }} variant="body2">
+                        <Typography sx={{ mt: 1.5 }} variant="body1">
                             {desc}
+                        </Typography>
+                        <Typography sx={{ mt: 1.5 }} variant="subtitle2">
+                            {tags}
                         </Typography>
                     </CardContent>
                     {liveLink &&
@@ -28,7 +31,7 @@ const Projects = ({ title, imgSrc, desc, liveLink, sourceCode }) => {
                             </Button>
                         </Link>
                     }
-                    { sourceCode &&
+                    {sourceCode &&
                         <Link sx={{ textDecoration: "none" }} href={sourceCode} target="_blank">
                             <Button variant="outlined" sx={{ marginBottom: "10px", marginLeft: "5px" }}>
                                 Source Code

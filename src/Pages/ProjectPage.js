@@ -6,7 +6,7 @@ import Particle from '../Components/Particle';
 import Title from '../Components/Title';
 import { Grid } from '@mui/material';
 import Projects from '../Components/Project/Projects';
-import { ProjectList } from '../Components/Project/ProjectList';
+import { ExerciseList, ProjectList } from '../Components/Project/ProjectList';
 
 const ProjectPage = () => {
 
@@ -29,7 +29,7 @@ const ProjectPage = () => {
                         {ProjectList.map((skill, index) => (
                             <Projects
                                 key={index}
-                                index={index}
+                                tags={skill.tags}
                                 imgSrc={skill.imgSrc}
                                 liveLink={skill.liveLink}
                                 sourceCode={skill.sourceCode}

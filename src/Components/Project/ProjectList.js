@@ -12,18 +12,20 @@ import eleven from '../../Assets/Projects/11-1.jpg';
 
 export const ProjectList = [
     {
-        title: "Healthcare Patient Registration",
-        desc: "This site itself adjusts its width depending on what device you use for viewing.",
-        imgSrc: one,
-        liveLink: null,
-        sourceCode: null,
+        title: "DigiLife Magazine",
+        desc: "The first portfolio project made along with my colleagues as a Mini-project Requirement for KodeGo Bootcamp.",
+        tags: ["#HTML ", "#CSS ", "#JavaScript "],
+        imgSrc: two,
+        liveLink: "https://mark123jesper.github.io/digi-life-magazine/",
+        sourceCode: "https://github.com/mark123jesper/digi-life-magazine",
     },
     {
-        title: "DigiLife Magazine",
-        desc: "This site itself adjusts its width depending on what device you use for viewing.",
-        imgSrc: two,
-        liveLink: null,
-        sourceCode: null,
+        title: "Healthcare Login Form",
+        desc: "A mini and exercise project that consists of login page and a registration page, both with only client side form validations",
+        imgSrc: five,
+        tags: ["#HTML ", "#CSS ", "#Bootstrap "],
+        liveLink: "https://healthcare-regform.netlify.app/",
+        sourceCode: "https://github.com/mark123jesper/healthcare-registration",
     },
     {
         title: "Personal Portfolio v1",
@@ -40,20 +42,6 @@ export const ProjectList = [
         sourceCode: null,
     },
     {
-        title: "Healthcare Login Form",
-        desc: "This site itself adjusts its width depending on what device you use for viewing.",
-        imgSrc: five,
-        liveLink: null,
-        sourceCode: null,
-    },
-    {
-        title: "React Meetups",
-        desc: "This site itself adjusts its width depending on what device you use for viewing.",
-        imgSrc: six,
-        liveLink: null,
-        sourceCode: null,
-    },
-    {
         title: "React Journal",
         desc: "This site itself adjusts its width depending on what device you use for viewing.",
         imgSrc: seven,
@@ -66,6 +54,13 @@ export const ProjectList = [
         imgSrc: eight,
         liveLink: "https://react-tasks-thoughts.vercel.app/",
         sourceCode: "https://github.com/mark123jesper/react-todos",
+    },
+    {
+        title: "React Meetups",
+        desc: "This site itself adjusts its width depending on what device you use for viewing.",
+        imgSrc: six,
+        liveLink: null,
+        sourceCode: null,
     },
     {
         title: "Escuela de Sto. Rosario",
