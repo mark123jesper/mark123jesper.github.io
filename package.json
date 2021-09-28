@@ -9,17 +9,21 @@
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.1",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "emailjs-com": "^3.2.0",
+    "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-particles-js": "^3.5.3",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "react-tiger-transition": "^4.1.2",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.1",
+    "sweetalert2": "^11.1.7",
     "tsparticles": "^1.35.1",
-    "typewriter-effect": "^2.18.2"
+    "typewriter-effect": "^2.18.2",
+    "yup": "^0.32.9"
   },
   "resolutions": {
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
@@ -47,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
   }
 }
