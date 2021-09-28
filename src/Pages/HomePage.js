@@ -42,7 +42,7 @@ const HomePage = () => {
                                 </Stack>
                             </Grid>
                             <Grid item xs={12}>
-                                <Button component={RouteLink} to="/contact" className="button" size="large" variant="outlined">
+                                <Button component={RouteLink} to="/contact" className="button" size="large" variant="contained">
                                     Contact Me
                                 </Button>
                             </Grid>

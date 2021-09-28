@@ -59,7 +59,7 @@ const ContactPage = () => {
                                 onSubmit={(values, { resetForm }) => {
                                     emailjs.send(process.env.REACT_APP_FORMIK_SERVICE_ID, process.env.REACT_APP_FORMIK_TEMPLATE_ID, values, process.env.REACT_APP_FORMIK_USER_ID)
                                         .then(() => {
-                                            resetForm({});
+                                            resetForm({}); 
                                             Swal.fire(
                                                 'Message Successfully Sent',
                                                 'Thank you for messaging.',

@@ -19,7 +19,7 @@ const AboutMark = () => {
                         </Typography>
                     </Grid>
                     <Grid item mt={3}>
-                        <Button variant="outlined" color="primary" size="large"><Link sx={{ textDecoration: "none" }} color="primary" href="https://drive.google.com/file/d/1LR91btaJ0a4L8AJPXdF1AADZ0td8aOeN/view?usp=sharing" target="_blank">Download Mark's CV</Link></Button>
+                        <Button variant="outlined" size="large"><Link sx={{ textDecoration: "none" }} color="primary" href="https://drive.google.com/file/d/1LR91btaJ0a4L8AJPXdF1AADZ0td8aOeN/view?usp=sharing" target="_blank">Download Mark's CV</Link></Button>
                     </Grid>
                 </Grid>
             </Grid>
