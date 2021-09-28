@@ -6,17 +6,15 @@ const ContactCards = ({icon, title, details}) => {
         <Grid item xs={12} md={6}>
             <Paper sx={{ padding: 2 }}>
                 <Grid container spacing={2} alignItems="center" justifyContent="center">
-                    <Grid item xs={12} md={3} align="center" alignItems="center" justifyContent="center">
+                    <Grid item xs={12} md={12} lg={2} alignItems="center" justifyContent="center">
                         {/* <LocalPhoneIcon /> */}
                         {icon}
                     </Grid>
-                    <Grid item xs={12} md={9} alignItems="center" justifyContent="center">
-                        <Typography variant="h6">
-                            {/* Phone */}
+                    <Grid item xs={12} md={12} lg={10} alignItems="center" justifyContent="center">
+                        <Typography variant="h6" sx={{wordBreak: "break-all", wordWrap: "break-word"}}>
                             {title}
                         </Typography>
-                        <Typography variant="body1">
-                            {/* +63 995 1919 650 */}
+                        <Typography variant="body1" sx={{wordBreak: "break-all", wordWrap: "break-word"}}>
                             {details}
                         </Typography>
                     </Grid>

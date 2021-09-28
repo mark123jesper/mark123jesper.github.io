@@ -50,7 +50,7 @@ const ContactPage = () => {
                         Get in Touch
                     </Typography>
                     <Grid container spacing={1}>
-                        <Grid container item md={6}>
+                        <Grid container item lg={6}>
                             <Formik
                                 initialValues={{
                                     ...inistialState
@@ -67,10 +67,10 @@ const ContactPage = () => {
                                             );
 
                                         })
-                                        .catch(error => {
+                                        .catch(() => {
                                             Swal.fire(
                                                 'Something went Wrong',
-                                                `${error}.`,
+                                                `Please try again.`,
                                                 'error'
                                             );
                                         });
@@ -105,7 +105,7 @@ const ContactPage = () => {
                                 </Form>
                             </Formik>
                         </Grid>
-                        <Grid container item md={6} spacing={2} alignItems="center" justifyContent="center">
+                        <Grid container item lg={6} spacing={2} alignItems="center" justifyContent="center" sx={{ marginTop: 2 }}>
                             <ContactCards title={"Phone"} icon={<LocalPhoneIcon />} details={"+63 995 1919 650"}/>
                             <ContactCards title={"Email"} icon={<EmailIcon />} details={"whitecat123dev@gmail.com"}/>
                             <ContactCards title={"Address"} icon={<MyLocationIcon />} details={"Taguig City, Philippines"}/>
